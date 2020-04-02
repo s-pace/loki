@@ -17,9 +17,11 @@ import FetchComponent from '../FetchComponent';
 import ZeroHeightWithPadding from '../ZeroHeightWithPadding';
 import Hover from '../Hover';
 
-storiesOf('Welcome', module).lokiSkip('to Storybook', () => (
-  <Welcome showApp={linkTo('Button')} />
-));
+storiesOf('Welcome', module)
+  .lokiSkip('to Storybook', () => <Welcome showApp={linkTo('Button')} />)
+  .add('skipped', () => <Welcome showApp={linkTo('Button')} />, {
+    loki: { skip: true },
+  });
 
 storiesOf('Text', module).add('with external font', () => (
   <CursiveText>Hello CursiveText</CursiveText>

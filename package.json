@@ -57,7 +57,8 @@
     "testEnvironment": "node",
     "testPathIgnorePatterns": [
       "/node_modules/",
-      "/examples/"
+      "/examples/",
+      "test/cli/generated"
     ]
   }
 }
